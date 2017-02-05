@@ -7,8 +7,94 @@
     <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./dist/css/styles.min.css">
   </head>
-<body>
-  <h2>Calculator</h2>
-  <script type="text/javascript" src="./dist/js/scripts.min.js"></script>
+<body> 
+
+	<div class="container">
+	<div class="row">
+
+	<div class="col-xs-offset-3 col-xs-9 col-sm-12 col-md-offset-1 col-md-5">
+
+		<div class="row">
+	    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-10">
+	    	<h2 class="headding">Free Code Camp</h2>
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-10">
+	    	<div class="displaySecttion">
+	    		<div id="displayEquation"></div>
+	    		<div id="displayHistory"></div>
+	    	</div>	    	
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-10">
+	    	<button type="button" class="btn btn-default btn-get-clr" id="clear" name="clear" value="clear">Clear</button>
+	    	<button type="button" class="btn btn-default btn-get-stpBck" id="stepBack" name="stepBack" value="C">C</button>
+	    	<button type="button" class="btn btn-default btn-get-op" id="dividant" name="dividant" value="/">/</button>
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-10">
+	    	<button type="button" class="btn btn-default btn-get-num" id="seven" name="seven" value="7">7</button>
+	    	<button type="button" class="btn btn-default btn-get-num" id="eight" name="eight" value="8">8</button>
+	    	<button type="button" class="btn btn-default btn-get-num" id="nine" name="nine" value="9">9</button>
+	    	<button type="button" class="btn btn-default btn-get-op" id="product" name="product" value="*">*</button>
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-10">
+	    	<button type="button" class="btn btn-default btn-get-num" id="four" name="four" value="4">4</button>
+	    	<button type="button" class="btn btn-default btn-get-num" id="five" name="five" value="5">5</button>
+	    	<button type="button" class="btn btn-default btn-get-num" id="six" name="six" value="6">6</button>
+	    	<button type="button" class="btn btn-default btn-get-op" id="subtract" name="subtract" value="-">-</button>
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-10">
+	    	<button type="button" class="btn btn-default btn-get-num" id="one" name="one" value="1">1</button>
+	    	<button type="button" class="btn btn-default btn-get-num" id="two" name="two" value="2">2</button>
+	    	<button type="button" class="btn btn-default btn-get-num" id="three" name="three" value="3">3</button>
+	    	<button type="button" class="btn btn-default btn-get-op" id="addition" name="addition" value="+">+</button>
+	    </div>
+	  </div>
+
+	  <div class="row">
+	    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-10">
+	    	<button type="button" class="btn btn-default btn-get-num" id="zero" name="zero" value="0">0</button>
+	    	<button type="button" class="btn btn-default btn-get-num" id="doubleZeros" name="doubleZeros" value="00">00</button>
+	    	<button type="button" class="btn btn-default btn-get-op" id="decimalPoint" name="decimalPoint" value=".">.</button>
+	    	<button type="button" class="btn btn-default btn-get-res" id="answer" name="answer" value="=">=</button>
+	    </div>
+	  </div>	
+
+	</div>
+
+	<div class="col-xs-offset-3 col-xs-9 col-sm-12 col-md-offset-1 col-md-5">
+		<button type="button" class="btn btn-default btn-get-histBtn" id="completeHistory" name="completeHistory" value="completeHistory">Show complete history</button>
+		<div class="extHistory"></div>
+	</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<p class="author text-center">
+				JavaScript Calculator by <i><a href="https://github.com/aadhikar">Anilkumar Adhikari</a></i>
+			</p>
+		</div>
+	</div>
+
+	</div>
+
+
+	
+
+  <!-- <script type="text/javascript" src="./dist/js/scripts.min.js"></script> -->
+  <script type="text/javascript" src="./app/js/calculator.js"></script>
 </body>
 </html>
