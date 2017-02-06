@@ -13,7 +13,7 @@
       stepBack = $('.btn-get-stpBck'),
       displayHistory = $('.btn-get-histBtn'),
       history = '',
-      extHistory = [];
+      showHistStatus = false;
 
     getNum.click(function() {
       var $this = this;
@@ -48,8 +48,10 @@
       } else {
         re = re.includes('.') ? eval(re).toFixed(7) : eval(re).toString(10);
         setHistory.text(re);
-        extHistory.push(history + '=' + re);
-        console.log(extHistory);
+        $('.extHistory').append('<div class="completeHistoryList">' + history + '=' + re + '</div>');
+        if(showHistStatus !== true){
+          $('.completeHistoryList').hide();
+        }        
         re = '';
         setInput.text(re);
       }
@@ -57,23 +59,22 @@
 
     displayHistory.click(function() {
       var $this = this;
-      console.log(extHistory);
-      if ($($this).text() === 'Show complete history' && extHistory[0] !== undefined) {
+      if ($($this).text() === 'Show complete history' && $('.extHistory').children()[0] !== undefined) {
         $($this).text('Hide complete history');
-        $.each(extHistory, function(index, val) {
-          $('.extHistory').append('<div class="completeHistoryList">' + extHistory[index] + '</div>');
-        });
+        $('.completeHistoryList').show();
+        showHistStatus = true;
       } else {
         $($this).text('Show complete history');
-        $('.completeHistoryList').remove();
+        $('.completeHistoryList').hide();
       }
-
     });
 
     clearInput.click(function() {
       re = '';
       setInput.text(re);
       setHistory.text(re);
+      $('.completeHistoryList').detach();
+      $('#completeHistory').text('Show complete history');
     });
 
   });
