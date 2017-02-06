@@ -47,7 +47,7 @@
         return false;
       } else {
         re = re.includes('.') ? eval(re).toFixed(7) : eval(re).toString(10);
-        setHistory.text(history + '=' + re);
+        setHistory.text(re);
         extHistory.push(history + '=' + re);
         console.log(extHistory);
         re = '';
